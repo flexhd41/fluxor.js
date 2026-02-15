@@ -1,6 +1,6 @@
 # Error Handling
 
-Fluxor.js provides a hierarchy of error classes for handling API failures. All API errors extend the base `FluxorApiError` class, and specific subclasses are thrown for common HTTP status codes.
+Fluxer.js provides a hierarchy of error classes for handling API failures. All API errors extend the base `FluxorApiError` class, and specific subclasses are thrown for common HTTP status codes.
 
 ---
 
@@ -19,7 +19,7 @@ Error
 The base error class for all API failures.
 
 ```ts
-import { FluxorApiError } from "fluxor.js";
+import { FluxorApiError } from "fluxer.js";
 
 try {
   await bot.api.getChannel("invalid-id");
@@ -46,7 +46,7 @@ try {
 Thrown when the API returns 429 (Too Many Requests). Includes information about how long to wait.
 
 ```ts
-import { FluxorRateLimitError } from "fluxor.js";
+import { FluxorRateLimitError } from "fluxer.js";
 
 try {
   await bot.api.sendMessage(channelId, "spam");
@@ -70,7 +70,7 @@ try {
 Thrown when the API returns 404 (Not Found).
 
 ```ts
-import { FluxorNotFoundError } from "fluxor.js";
+import { FluxorNotFoundError } from "fluxer.js";
 
 try {
   await bot.api.getUser("nonexistent-id");
@@ -86,7 +86,7 @@ try {
 Thrown when the API returns 403 (Forbidden).
 
 ```ts
-import { FluxorForbiddenError } from "fluxor.js";
+import { FluxorForbiddenError } from "fluxer.js";
 
 try {
   await bot.api.deleteMessage(channelId, messageId);
@@ -107,7 +107,7 @@ import {
   FluxorRateLimitError,
   FluxorNotFoundError,
   FluxorForbiddenError,
-} from "fluxor.js";
+} from "fluxer.js";
 
 try {
   await bot.api.banMember(guildId, userId, { reason: "spam" });

@@ -1,4 +1,4 @@
-# Fluxor.js
+# Fluxer.js
 
 A JavaScript / TypeScript SDK for the **Fluxor** platform — build bots and integrations with ease.
 
@@ -23,7 +23,7 @@ A JavaScript / TypeScript SDK for the **Fluxor** platform — build bots and int
 ## Installation
 
 ```bash
-npm install fluxor.js
+npm install fluxer.js
 ```
 
 > **Requires Node.js 18+** (for native `fetch`).
@@ -33,7 +33,7 @@ npm install fluxor.js
 ## Quick Start
 
 ```ts
-import { Client, createConsoleLogger } from "fluxor.js";
+import { Client, createConsoleLogger } from "fluxer.js";
 
 const bot = new Client("Bot YOUR_TOKEN_HERE", {
   logger: createConsoleLogger("info"),
@@ -60,7 +60,7 @@ await bot.connect();
 
 ## Architecture
 
-Fluxor.js exposes three levels of abstraction:
+Fluxer.js exposes three levels of abstraction:
 
 | Class | Purpose |
 |-------|---------|
@@ -135,7 +135,7 @@ await bot.api.sendMessage(channelId, "Hello!");
 ## EmbedBuilder
 
 ```ts
-import { EmbedBuilder } from "fluxor.js";
+import { EmbedBuilder } from "fluxer.js";
 
 const embed = new EmbedBuilder()
   .setTitle("My Embed")
@@ -143,7 +143,7 @@ const embed = new EmbedBuilder()
   .setColor(0x5865f2)
   .addField("Field 1", "Value 1", true)
   .addField("Field 2", "Value 2", true)
-  .setFooter("Fluxor.js")
+  .setFooter("Fluxer.js")
   .setTimestamp()
   .build();
 
@@ -155,8 +155,8 @@ await bot.send(channelId, { embeds: [embed] });
 ## Command Framework
 
 ```ts
-import { Client, CommandService } from "fluxor.js";
-import type { CommandDefinition } from "fluxor.js";
+import { Client, CommandService } from "fluxer.js";
+import type { CommandDefinition } from "fluxer.js";
 
 const commands = new CommandService({ prefix: "!" });
 
@@ -183,7 +183,7 @@ bot.on("MESSAGE_CREATE", async (msg) => {
 ### Preconditions
 
 ```ts
-import { requireGuild, requireOwner } from "fluxor.js";
+import { requireGuild, requireOwner } from "fluxer.js";
 
 const adminCmd: CommandDefinition = {
   name: "admin",
@@ -195,7 +195,7 @@ const adminCmd: CommandDefinition = {
 ### Argument Parsing
 
 ```ts
-import { NumberParser } from "fluxor.js";
+import { NumberParser } from "fluxer.js";
 
 const roll: CommandDefinition = {
   name: "roll",
@@ -250,7 +250,7 @@ bot.on("raw", ({ event, data }) => {
 All 18 enum types from the .NET SDK are available:
 
 ```ts
-import { ChannelType, MessageType, Permissions, hasPermission } from "fluxor.js";
+import { ChannelType, MessageType, Permissions, hasPermission } from "fluxer.js";
 
 if (channel.type === ChannelType.GuildText) { ... }
 if (hasPermission(BigInt(member.permissions), Permissions.BanMembers)) { ... }
@@ -261,7 +261,7 @@ if (hasPermission(BigInt(member.permissions), Permissions.BanMembers)) { ... }
 ## Error Handling
 
 ```ts
-import { FluxorApiError, FluxorRateLimitError, FluxorNotFoundError } from "fluxor.js";
+import { FluxorApiError, FluxorRateLimitError, FluxorNotFoundError } from "fluxer.js";
 
 try {
   await bot.api.getChannel("invalid-id");

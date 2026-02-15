@@ -1,6 +1,6 @@
-# Fluxor.js Wiki
+# Fluxer.js Wiki
 
-**Fluxor.js** is a JavaScript / TypeScript SDK for the Fluxor platform. It is a community port of [Fluxer.Net](https://github.com/Nexfinity/Fluxer.Net) (C# / .NET) to the Node.js ecosystem.
+**Fluxer.js** is a JavaScript / TypeScript SDK for the Fluxor platform. It is a community port of [Fluxer.Net](https://github.com/Nexfinity/Fluxer.Net) (C# / .NET) to the Node.js ecosystem.
 
 ---
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-Fluxor.js provides three levels of abstraction:
+Fluxer.js provides three levels of abstraction:
 
 | Class | Purpose |
 |-------|---------|
@@ -37,13 +37,13 @@ Fluxor.js provides three levels of abstraction:
 ## Installation
 
 ```bash
-npm install fluxor.js
+npm install fluxer.js
 ```
 
 ## Quick Example
 
 ```ts
-import { Client, createConsoleLogger } from "fluxor.js";
+import { Client, createConsoleLogger } from "fluxer.js";
 
 const bot = new Client("Bot YOUR_TOKEN_HERE", {
   logger: createConsoleLogger("info"),

@@ -1,5 +1,5 @@
 /**
- * Logger interface used throughout Fluxor.js.
+ * Logger interface used throughout Fluxer.js.
  * Consumers can pass any object that satisfies this shape (e.g. console, pino, winston).
  */
 export interface Logger {

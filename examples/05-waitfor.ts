@@ -154,7 +154,7 @@ bot.on("MESSAGE_CREATE", async (msg) => {
   // ── Wait for a reaction ───────────────────────────────────────────────
 
   if (msg.content === "!poll") {
-    const pollMsg = await bot.send(msg.channel_id, "Do you like Fluxor.js? React to this message!");
+    const pollMsg = await bot.send(msg.channel_id, "Do you like Fluxer.js? React to this message!");
 
     // Wait for any reaction on the poll message
     try {

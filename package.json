@@ -1,8 +1,8 @@
 {
-  "name": "@flexhd41/fluxor.js",
-  "version": "1.0.1",
+  "name": "@flexhd41/fluxer.js",
+  "version": "1.0.2",
   "type": "module",
-  "description": "A JavaScript/TypeScript SDK for the Fluxor platform — bot development made easy.",
+  "description": "A JavaScript/TypeScript SDK for the Fluxer platform — bot development made easy.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {

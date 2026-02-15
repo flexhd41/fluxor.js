@@ -45,9 +45,9 @@ bot.on("MESSAGE_CREATE", async (msg) => {
     const embed = new EmbedBuilder()
       .setTitle("Full Embed Example")
       .setDescription("This embed uses every available feature.")
-      .setUrl("https://github.com/flexhd41/fluxor.js")
+      .setUrl("https://github.com/flexhd41/fluxer.js")
       .setColor(0x5865f2)
-      .setAuthor("Fluxor.js Bot", "https://github.com/flexhd41/fluxor.js")
+      .setAuthor("Fluxer.js Bot", "https://github.com/flexhd41/fluxer.js")
       .setThumbnail("https://via.placeholder.com/80")
       .setImage("https://via.placeholder.com/400x200")
       .addFields(

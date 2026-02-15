@@ -7,7 +7,7 @@ The `EmbedBuilder` provides a fluent API for constructing rich embed objects wit
 ## Basic Usage
 
 ```ts
-import { EmbedBuilder } from "fluxor.js";
+import { EmbedBuilder } from "fluxer.js";
 
 const embed = new EmbedBuilder()
   .setTitle("My Embed")
@@ -57,7 +57,7 @@ The `build()` method throws a `RangeError` if any validation constraint is viola
 For advanced use, you can use the sub-builders directly:
 
 ```ts
-import { EmbedAuthorBuilder, EmbedFooterBuilder, EmbedFieldBuilder } from "fluxor.js";
+import { EmbedAuthorBuilder, EmbedFooterBuilder, EmbedFieldBuilder } from "fluxer.js";
 
 const author = new EmbedAuthorBuilder("Author Name")
   .setUrl("https://example.com")
@@ -75,7 +75,7 @@ const field = new EmbedFieldBuilder("Field Name", "Field Value", true)
 ## Full Example
 
 ```ts
-import { EmbedBuilder } from "fluxor.js";
+import { EmbedBuilder } from "fluxer.js";
 
 const embed = new EmbedBuilder()
   .setTitle("Server Info")

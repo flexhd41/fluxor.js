@@ -1,6 +1,6 @@
 # Rate Limiting
 
-Fluxor.js includes a client-side rate limiting system that mirrors the sliding-window bucket algorithm from the .NET SDK. It prevents your bot from exceeding API rate limits by queueing requests per route.
+Fluxer.js includes a client-side rate limiting system that mirrors the sliding-window bucket algorithm from the .NET SDK. It prevents your bot from exceeding API rate limits by queueing requests per route.
 
 ---
 
@@ -95,7 +95,7 @@ const manager = bot.api.rateLimitManager;
 Even with client-side rate limiting, the server may return 429. The SDK throws a `FluxorRateLimitError`:
 
 ```ts
-import { FluxorRateLimitError } from "fluxor.js";
+import { FluxorRateLimitError } from "fluxer.js";
 
 try {
   await bot.api.sendMessage(channelId, "message");

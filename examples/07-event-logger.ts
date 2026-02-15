@@ -2,7 +2,7 @@
  * 07 - Event Logger
  *
  * A utility bot that logs all gateway events to the console.
- * Useful for understanding what events the Fluxor gateway sends
+ * Useful for understanding what events the Fluxer gateway sends
  * and for debugging. Also demonstrates the raw event handler,
  * heartbeat latency tracking, and typing indicators.
  *

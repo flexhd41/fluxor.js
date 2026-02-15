@@ -7,7 +7,7 @@ The `GatewayClient` class manages the WebSocket connection to the Fluxor gateway
 ## Constructor
 
 ```ts
-import { GatewayClient } from "fluxor.js";
+import { GatewayClient } from "fluxer.js";
 
 const gateway = new GatewayClient(token: string, config?: FluxorConfig);
 ```
@@ -165,7 +165,7 @@ Certain close codes trigger specific behavior:
 ## Low-Level Usage
 
 ```ts
-import { GatewayClient, ApiClient } from "fluxor.js";
+import { GatewayClient, ApiClient } from "fluxer.js";
 
 const api = new ApiClient("Bot TOKEN");
 const gateway = new GatewayClient("Bot TOKEN");

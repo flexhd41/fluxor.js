@@ -1,5 +1,5 @@
 /**
- * Fluxor.js — Example Bot
+ * Fluxer.js — Example Bot
  *
  * Demonstrates:
  *   - Basic event handling
@@ -20,8 +20,10 @@ import {
   createConsoleLogger,
   EmbedBuilder,
   CommandService,
+  requireGuild,
 } from "../src/index.js";
 import type { CommandDefinition } from "../src/index.js";
+import { runSetup } from "../scripts/community-server-plan.js";
 
 // ── Configuration ────────────────────────────────────────────────────────────
 
@@ -54,12 +56,12 @@ const embedCommand: CommandDefinition = {
   summary: "Show an example embed",
   execute: async (ctx) => {
     const embed = new EmbedBuilder()
-      .setTitle("Hello from Fluxor.js!")
+      .setTitle("Hello from Fluxer.js!")
       .setDescription("This embed was built with the **EmbedBuilder**.")
       .setColor(0x5865f2)
       .addField("Uptime", `${Math.floor(bot.uptime / 1000)}s`, true)
       .addField("Guilds", `${bot.guilds.size}`, true)
-      .setFooter("Fluxor.js SDK")
+      .setFooter("Fluxer.js SDK")
       .setTimestamp()
       .build();
 
@@ -80,7 +82,24 @@ const whoamiCommand: CommandDefinition = {
   },
 };
 
-commands.addCommands(pingCommand, embedCommand, whoamiCommand);
+const setupServerCommand: CommandDefinition = {
+  name: "setup-server",
+  summary: "Create community server channels and welcome messages in this guild",
+  preconditions: [requireGuild()],
+  execute: async (ctx) => {
+    await ctx.reply("Setting up server... Creating categories and channels.");
+    const result = await runSetup(ctx.api, ctx.guildId!, { delayMs: 500 });
+    const errText =
+      result.errors.length > 0
+        ? `\nErrors: ${result.errors.slice(0, 5).join("; ")}${result.errors.length > 5 ? "..." : ""}`
+        : "";
+    await ctx.reply(
+      `Done. Created **${result.categoriesCreated}** categories and **${result.channelsCreated}** channels.${errText}`
+    );
+  },
+};
+
+commands.addCommands(pingCommand, embedCommand, whoamiCommand, setupServerCommand);
 
 // ── Events ───────────────────────────────────────────────────────────────────
 

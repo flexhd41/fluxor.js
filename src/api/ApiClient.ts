@@ -134,7 +134,7 @@ export class ApiClient {
     this.rateLimitManager = new RateLimitManager(this._config.enableRateLimiting, this._log);
 
     this._log.info(
-      `Initialised Fluxor.js ApiClient (API base ${this._baseUrl}, ` +
+      `Initialised Fluxer.js ApiClient (API base ${this._baseUrl}, ` +
         `rate limiting ${this._config.enableRateLimiting ? "enabled" : "disabled"})`,
     );
   }

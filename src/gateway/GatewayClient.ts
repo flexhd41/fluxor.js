@@ -71,7 +71,7 @@ export class GatewayClient {
     this._emitter.on("error", () => {});
 
     this._log.info(
-      `Initialised Fluxor.js GatewayClient (gateway ${this._config.gatewayUrl})`,
+      `Initialised Fluxer.js GatewayClient (gateway ${this._config.gatewayUrl})`,
     );
   }
 
@@ -390,8 +390,8 @@ export class GatewayClient {
         token: getGatewayToken(this.token),
         properties: {
           os: process.platform,
-          browser: "fluxor.js",
-          device: "fluxor.js",
+          browser: "fluxer.js",
+          device: "fluxer.js",
         },
         presence: this._config.presence,
         ignored_gateway_events: this._config.ignoredGatewayEvents,

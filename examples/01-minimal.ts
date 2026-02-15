@@ -1,7 +1,7 @@
 /**
  * 01 - Minimal Bot
  *
- * The simplest possible Fluxor.js bot. Connects to the gateway,
+ * The simplest possible Fluxer.js bot. Connects to the gateway,
  * logs when ready, and replies "Pong!" to any message containing "!ping".
  *
  * Run:

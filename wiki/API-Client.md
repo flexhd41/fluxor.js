@@ -7,7 +7,7 @@ The `ApiClient` class provides typed methods for every Fluxor REST API endpoint.
 ## Constructor
 
 ```ts
-import { ApiClient } from "fluxor.js";
+import { ApiClient } from "fluxer.js";
 
 const api = new ApiClient(token: string, config?: FluxorConfig);
 ```

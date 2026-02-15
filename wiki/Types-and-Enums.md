@@ -1,12 +1,12 @@
 # Types and Enums
 
-Fluxor.js provides comprehensive TypeScript type definitions for all data models, gateway events, and enumerated values. All model interfaces use `snake_case` property names matching the API wire format.
+Fluxer.js provides comprehensive TypeScript type definitions for all data models, gateway events, and enumerated values. All model interfaces use `snake_case` property names matching the API wire format.
 
 ---
 
 ## Data Models
 
-All model interfaces are exported from `fluxor.js` and defined in `src/types/models.ts`. Fields that are always present in API responses are required; contextually absent fields are optional.
+All model interfaces are exported from `fluxer.js` and defined in `src/types/models.ts`. Fields that are always present in API responses are required; contextually absent fields are optional.
 
 ### Core Models
 
@@ -78,7 +78,7 @@ Separate payload types are provided for create/update endpoints where most field
 
 ## Enums
 
-All 18+ enum types are exported from `fluxor.js` and defined in `src/types/enums.ts`.
+All 18+ enum types are exported from `fluxer.js` and defined in `src/types/enums.ts`.
 
 ### Status
 
@@ -145,7 +145,7 @@ enum MessageFlags {
 Permissions are defined as `bigint` constants for bitfield operations:
 
 ```ts
-import { Permissions, hasPermission } from "fluxor.js";
+import { Permissions, hasPermission } from "fluxer.js";
 
 // Check permissions
 const bits = BigInt(member.permissions);

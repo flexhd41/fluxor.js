@@ -1,9 +1,9 @@
 /**
- * fluxor.js — JavaScript / TypeScript SDK for the Fluxor platform.
+ * fluxer.js — JavaScript / TypeScript SDK for the Fluxor platform.
  *
  * @example
  * ```ts
- * import { Client } from "fluxor.js";
+ * import { Client } from "fluxer.js";
  *
  * const bot = new Client("Bot your-token-here");
  *

@@ -7,7 +7,7 @@ The `Client` class is the recommended high-level interface for building Fluxor b
 ## Constructor
 
 ```ts
-import { Client } from "fluxor.js";
+import { Client } from "fluxer.js";
 
 const bot = new Client(token: string, config?: FluxorConfig);
 ```
@@ -110,7 +110,7 @@ Caches are cleared when `destroy()` is called.
 ## Full Example
 
 ```ts
-import { Client, createConsoleLogger } from "fluxor.js";
+import { Client, createConsoleLogger } from "fluxer.js";
 
 const bot = new Client("Bot YOUR_TOKEN_HERE", {
   logger: createConsoleLogger("info"),

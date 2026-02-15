@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide walks you through creating your first Fluxor.js bot from scratch.
+This guide walks you through creating your first Fluxer.js bot from scratch.
 
 ---
 
@@ -10,7 +10,7 @@ This guide walks you through creating your first Fluxor.js bot from scratch.
 mkdir my-fluxor-bot
 cd my-fluxor-bot
 npm init -y
-npm install fluxor.js
+npm install fluxer.js
 npm install -D typescript tsx
 npx tsc --init
 ```
@@ -57,7 +57,7 @@ Or use a `.env` file with a library like `dotenv`.
 Create `src/index.ts`:
 
 ```ts
-import { Client, createConsoleLogger } from "fluxor.js";
+import { Client, createConsoleLogger } from "fluxer.js";
 
 const TOKEN = process.env.FLUXOR_TOKEN;
 if (!TOKEN) {

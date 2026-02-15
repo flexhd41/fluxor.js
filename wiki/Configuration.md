@@ -75,10 +75,10 @@ interface Logger {
 }
 ```
 
-Fluxor.js ships with two built-in loggers:
+Fluxer.js ships with two built-in loggers:
 
 ```ts
-import { createConsoleLogger, noopLogger } from "fluxor.js";
+import { createConsoleLogger, noopLogger } from "fluxer.js";
 
 // Console logger with configurable level
 const logger = createConsoleLogger("debug"); // "debug" | "info" | "warn" | "error"

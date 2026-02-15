@@ -1,6 +1,6 @@
 # Command Framework
 
-Fluxor.js includes a command framework for structured message-based command handling. It supports prefix matching, argument parsing, preconditions, and lifecycle hooks.
+Fluxer.js includes a command framework for structured message-based command handling. It supports prefix matching, argument parsing, preconditions, and lifecycle hooks.
 
 ---
 
@@ -20,8 +20,8 @@ The command framework consists of:
 ## Quick Start
 
 ```ts
-import { Client, CommandService } from "fluxor.js";
-import type { CommandDefinition } from "fluxor.js";
+import { Client, CommandService } from "fluxer.js";
+import type { CommandDefinition } from "fluxer.js";
 
 const bot = new Client("Bot TOKEN");
 const commands = new CommandService({ prefix: "!" });
@@ -174,7 +174,7 @@ Preconditions are functions that run before a command executes. If any precondit
 ### Built-in Preconditions
 
 ```ts
-import { requireGuild, requireOwner, requirePermissions, Permissions } from "fluxor.js";
+import { requireGuild, requireOwner, requirePermissions, Permissions } from "fluxer.js";
 
 const cmd: CommandDefinition = {
   name: "ban",
@@ -190,8 +190,8 @@ const cmd: CommandDefinition = {
 ### Custom Preconditions
 
 ```ts
-import type { Precondition, PreconditionResult } from "fluxor.js";
-import { CommandError } from "fluxor.js";
+import type { Precondition, PreconditionResult } from "fluxer.js";
+import { CommandError } from "fluxer.js";
 
 const requireChannel = (channelId: string): Precondition => {
   return (ctx) => {
@@ -212,7 +212,7 @@ const requireChannel = (channelId: string): Precondition => {
 Define parameters on a command to automatically parse arguments from the message.
 
 ```ts
-import { NumberParser, StringParser, BooleanParser } from "fluxor.js";
+import { NumberParser, StringParser, BooleanParser } from "fluxer.js";
 
 const greet: CommandDefinition = {
   name: "greet",
@@ -241,7 +241,7 @@ const greet: CommandDefinition = {
 ### Custom Type Parsers
 
 ```ts
-import type { TypeParser } from "fluxor.js";
+import type { TypeParser } from "fluxer.js";
 
 const UserMentionParser: TypeParser<string> = {
   name: "user_mention",
@@ -259,8 +259,8 @@ const UserMentionParser: TypeParser<string> = {
 For organizing commands into classes with shared lifecycle hooks:
 
 ```ts
-import { ModuleBase } from "fluxor.js";
-import type { CommandDefinition } from "fluxor.js";
+import { ModuleBase } from "fluxer.js";
+import type { CommandDefinition } from "fluxer.js";
 
 class ModerationCommands extends ModuleBase {
   getCommands(): CommandDefinition[] {
